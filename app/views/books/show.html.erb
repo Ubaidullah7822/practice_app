@@ -1,0 +1,31 @@
+<h1>Book Page<h1/>
+
+<%= @book.name %>
+<%= @book.description %>
+
+
+<h2>Add a comment</h2>
+
+<strong>Post Comments:</strong>
+
+<% @comments.each do |comment| %>
+  <p>
+    <%= comment.body %>
+    <% "&nbsp;" %>
+  </p>
+
+<% end %>
+
+
+<h2>Add a comment</h2>
+<%= form_with(model: [@book, @comment],
+              local: true) do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_field :body %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+  <% end %>

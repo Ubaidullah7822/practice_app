@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  <%= image_tag @post.image.url(:medium) %>
 <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>

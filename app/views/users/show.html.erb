@@ -1,3 +1,8 @@
 <h1>User Profile page</h1>
 
-<%
+  <b>Name:</b> <%= @user.name  %><br/>
+  <b>Email:</b> <%= @user.email  %><br/>
+  <%= image_tag @user.image.url(:medium) %>
+
+  <br/><br/><br/>
+
